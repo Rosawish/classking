@@ -274,7 +274,8 @@ h3 {
 .department-grid,
 .deliverable-grid,
 .prompt-library,
-.qa-grid {
+.qa-grid,
+.method-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
@@ -285,6 +286,7 @@ h3 {
 .deliverable-grid article,
 .prompt-library article,
 .qa-grid article,
+.method-grid article,
 .card,
 .note-panel {
   border: 1px solid var(--line);
@@ -299,6 +301,35 @@ h3 {
   font-size: 13px;
 }
 
+.method-block {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.method-block > p {
+  color: var(--muted);
+  max-width: 860px;
+}
+
+.method-grid article {
+  background: #fbfcfd;
+}
+
+.method-grid span {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--king-red);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.method-grid strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+
 .metric strong {
   display: block;
   margin: 6px 0;
@@ -309,6 +340,7 @@ h3 {
 .department-grid p,
 .deliverable-grid p,
 .qa-grid p,
+.method-grid p,
 .card p,
 .note-panel p {
   color: var(--muted);
@@ -319,6 +351,11 @@ h3 {
   margin-top: 18px;
   border-left: 6px solid var(--king-yellow);
   background: #fff9d9;
+}
+
+.ai-assisted {
+  border-left-color: var(--king-red);
+  background: #fff6f7;
 }
 
 .question-flow,
@@ -574,6 +611,7 @@ tr:last-child td { border-bottom: 0; }
   .deliverable-grid,
   .prompt-library,
   .qa-grid,
+  .method-grid,
   .two-col,
   .question-flow,
   .bsc-map,
